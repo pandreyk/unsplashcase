@@ -1,5 +1,4 @@
 {
-  "port": 5000,
   "mongoUri": "mongodb+srv://pandreyk:unsplashpass@cluster0.me4nr.mongodb.net/unsplash?retryWrites=true&w=majority",
   "corsOrigin": "http://localhost:3000",
   "ACCESS_TOKEN_SECRET": "Rocket company",

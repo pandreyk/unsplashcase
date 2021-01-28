@@ -4,6 +4,8 @@ const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const config = require('config')
 
+const PORT = process.env.PORT || 5000
+
 const auth = require('./routes/auth')
 const history = require('./routes/history')
 const favorites = require('./routes/favorites')
@@ -28,7 +30,7 @@ async function start() {
       useCreateIndex: true,
       useFindAndModify: true
     }
-    app.listen(config.get('port'), () => console.log('started on port 5000'))
+    app.listen(PORT, () => console.log('started on port 5000'))
   } catch (e) {
     console.log('Server error\n', e.message)
     process.exit(1)
