@@ -1,0 +1,132 @@
+.photo {
+  margin-bottom: 70px;
+}
+
+.photo-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; 
+  padding: 40px 0;
+}
+
+.photo-item-wrapper {
+  position: relative;
+  width: 100vw;
+  height: 60vh;
+  box-shadow: 0px 4px 100px #000;
+  border-radius: 8px;
+}
+
+.loading-text {
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  text-transform: uppercase;
+  font-size: 30px;
+  color: #c5c5c5;
+  z-index: 50;
+  text-align: center;
+}
+
+.photo-item-wrapper > img{
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.btn-fullscreen {
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+  font-size: 0;
+  cursor: pointer;
+}
+
+@media (max-width:768px), (max-width:823px) and (orientation: landscape) {
+  .photo-item-wrapper {
+    height: 100%;
+    width: 100%;
+    box-shadow: none;
+  }
+
+  .photo-item-blurhash {
+    width: 100%;
+    height: 100%;
+  }
+
+  .photo-item-wrapper > img{
+    width: 100%;
+    height: 100%;
+    max-height: 750px;
+  }
+
+  .btn-fullscreen {
+    bottom: 30px;
+    right: 20px;
+  }
+}
+
+@media only screen and (max-height:800px) and (min-width: 541px) {
+  .photo-item-wrapper {
+    height: 50vh;
+  }
+
+  .photo-item {
+    padding: 30px 0;
+  }
+}
+
+
+/*-------------------FULLSCREEN-------------------*/
+
+
+.fullscreeen {
+  z-index: 100;
+}
+
+.fullscreeen .photo-content {
+  width: 100%;
+  max-width: none;
+  padding: 0;
+}
+
+.fullscreeen .photo-item  {
+  height: 100%;
+  padding: 0;
+  overflow: auto;
+}
+
+.fullscreeen .photo-item-wrapper, .fullscreeen .photo-item-wrapper > img {
+  width: auto;
+  height: 100%;
+
+  border-radius: 0;
+}
+
+.fullscreeen .btn-fullscreen {
+  bottom: 5%;
+  right: -80px;
+}
+
+.fullscreeen .photo-topbar, .fullscreeen .photo-bottombar {
+  display: none;
+}
+
+@media (max-width:768px), screen and (orientation: portrait) {  
+  .fullscreeen .photo-item-wrapper, .fullscreeen .photo-item-wrapper > img {
+    height: auto; 
+    width: 100%; 
+    max-height: none;
+  }
+}
+
+@media (max-width:768px), screen and (orientation: portrait), (max-width:823px) and (orientation: landscape) {
+  .fullscreeen .btn-fullscreen {
+    bottom: 40px;
+    right: 20px;
+  }
+}
