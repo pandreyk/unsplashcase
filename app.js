@@ -22,6 +22,10 @@ app.use("/auth", auth)
 app.use("/history", history)
 app.use("/favorites", favorites)
 
+app.get('/test', async (req, res) => {
+  res.send({message: 'success!'})
+})
+
 async function start() {
   try{
     await mongoose.connect(config.get("mongoUri")), {
