@@ -22,7 +22,7 @@ app.use("/auth", auth)
 app.use("/history", history)
 app.use("/favorites", favorites)
 
-app.get('/test', async (req, res) => {
+app.get('/', async (req, res) => {
   res.send({message: 'success!'})
 })
 
