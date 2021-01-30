@@ -4,7 +4,7 @@ const verifyJWT = require('../helpers/verify')
 
 const router = express.Router()
 
-router.post('/addOrRemoveFavorites', verifyJWT, async (req, res) => {
+router.post('/toggleFavorites', verifyJWT, async (req, res) => {
   try {
     const { userId } = req.user
     const { photo, saved } = req.body
@@ -33,7 +33,7 @@ router.post('/addOrRemoveFavorites', verifyJWT, async (req, res) => {
       )
     }
   } catch (e) {
-      console.log("Ошибка - /addOrRemoveFavorites", e)
+      console.log("Ошибка - /toggleFavorites", e)
       res.status(500).json({ error: e.message })
   }
 })
