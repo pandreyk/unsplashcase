@@ -1,0 +1,142 @@
+.photo-topbar {
+  display: flex;
+  /* background-color: dodgerblue; */
+  width: 100%; 
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+
+.photo-user {
+  display: flex;
+  color: #f2f2f2;
+  font-size: 30px;
+}
+
+.photo-user-avatar {
+  height: 54px;
+  width: 54px;
+  border: 1px solid #FFFFFF;
+  border-radius: 8px;
+  margin-right: 10px;
+  align-self: center;
+}
+
+.photo-user-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.photo-user-username {
+  font-size: 18px;
+  color: #c5c5c5;
+}
+
+.photo-buttons {
+  display: flex;
+  color: #f2f2f2;
+  font-size: 30px;
+}
+
+.photo-like {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  color: #828282;
+  margin-right: 20px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+}
+
+.photo-like-icon{
+  display: flex;
+  font-size: 30px;
+}
+
+.photo-download {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #219653;
+  width: 205px;
+  height: 50px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  font-size: 20px;
+  color: #F2F2F2;
+  padding-right: 10px;
+}
+
+.photo-download-icon{
+  display: flex;
+  font-size: 30px; 
+  margin-right: 20px;
+}
+
+.photo-like, .photo-download, .photo-download-txt {
+  cursor: pointer;
+}
+
+@media (max-width:768px), (max-width:823px) and (orientation: landscape) {
+  .photo-user {
+    font-size: 18px;
+    color: #000;
+  }
+
+  .photo-user-username {
+    font-size: 16px;
+  }
+  
+  .photo-user-avatar {
+    height: 48px;
+    width: 48px;
+  }
+
+  .photo-like, .photo-download {
+    height: 40px;
+    width: 40px;
+    padding: 0;
+    /* font-size: 26px; */
+  }
+
+  .photo-download-txt {
+    display: none;
+  }
+
+  .photo-like-icon, .photo-download-icon {
+    margin: 0;
+    font-size: 26px;
+  }
+
+  .photo-like {
+    margin-right: 15px;
+  }
+}
+
+@media only screen and (max-height:800px) and (min-width: 541px) {
+  .photo-user {
+    font-size: 20px;
+  }
+
+  .photo-user-username {
+    font-size: 18px;
+  }
+  
+  .photo-user-avatar {
+    height: 48px;
+    width: 48px;
+  }
+
+  .photo-like-icon, .photo-download-icon {
+    font-size: 26px;
+  }
+
+  .photo-like {
+    margin-right: 15px;
+  }
+}
