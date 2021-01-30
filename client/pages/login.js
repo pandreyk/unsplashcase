@@ -7,6 +7,7 @@ import '../styles/auth.css'
 function LogInPage() {
   const { addToast } = useToasts()
   const [form, setForm] = useState({ login: '', password: '' })
+  const [isLoading, setLoading] = useState(false)
   
   const handleChange = (event) => {
     setForm({ ...form, [event.target.name]: event.target.value })
@@ -14,6 +15,7 @@ function LogInPage() {
 
   const handleFormSubmit = async (e) => {
     e.preventDefault()
+    setLoading(true)
 
     await login(form)
       .then(res => {
@@ -27,7 +29,8 @@ function LogInPage() {
         addToast(e.message, { appearance: 'error', autoDismiss: true })
       })
       .finally(() => {
-        setForm({ login: '', password: '' })     
+        setForm({ login: '', password: '' })
+        setLoading(false) 
       })
   }
 
@@ -35,7 +38,10 @@ function LogInPage() {
     <div className='auth'>
       <h2>LOG IN</h2>
 
-      <form onSubmit={handleFormSubmit}>
+      <form 
+        className={isLoading && 'auth-disabled'}
+        onSubmit={handleFormSubmit}
+      >
         <input 
           name='login' 
           placeholder='Login'
@@ -50,7 +56,7 @@ function LogInPage() {
           value={form.password}
           onChange={handleChange}
         /> 
-        <button type='submit'>Log In</button>
+        <button  type='submit'>Log In</button>
       </form>
 
       <div className='auth-link'>
