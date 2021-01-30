@@ -20,7 +20,7 @@ const generateRefreshToken = () => {
     type: 'refresh'
   }
   const secret = config.get('REFRESH_TOKEN_SECRET')
-  const options = { expiresIn: '30d' }
+  const options = { expiresIn: '29d' }
 
   return {
     id: payload.id,
