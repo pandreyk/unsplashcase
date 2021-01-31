@@ -9,7 +9,7 @@ const generateAccessToken = (userId) => {
     type: 'access'
   }
   const secret = config.get('ACCESS_TOKEN_SECRET')
-  const options = { expiresIn: '1m' }
+  const options = { expiresIn: '20m' }
 
   return jwt.sign(payload, secret, options)
 }
@@ -20,7 +20,7 @@ const generateRefreshToken = () => {
     type: 'refresh'
   }
   const secret = config.get('REFRESH_TOKEN_SECRET')
-  const options = { expiresIn: '29d' }
+  const options = { expiresIn: '30d' }
 
   return {
     id: payload.id,
