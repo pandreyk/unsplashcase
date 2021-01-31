@@ -1,0 +1,65 @@
+.auth {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  min-width: 300px;
+  height: auto;
+  margin: 8% auto;
+}
+
+.auth h2 {
+  text-align: center;
+}
+
+.auth form {
+  display: flex;
+  flex-direction: column;
+  margin: 5% 0;
+}
+
+.auth button {
+  align-self: center;
+  background-color: #000;
+  margin: 15px 0 0;
+  padding: 5px 8px;
+  border: 0;
+  font-size: 20px;
+  color: #FAFAFA;
+  cursor: pointer;
+  outline: none;
+}
+
+.auth input[type=text], .auth input[type=password] {
+  margin: 10px;
+  padding: 5px;
+  border: 0;
+  border-bottom: 2px solid #000;
+  font-size: 20px;
+  outline: none;
+}
+
+.auth-link {
+  margin: 30% 0 0;
+  display: flex;
+  margin: auto;
+}
+
+.auth a {
+  margin-left: 5px;
+  color: blue;
+  align-self: center;
+}
+
+.auth-disabled {
+  pointer-events: none;
+}
+
+.auth-disabled button {
+  color: #ececec;
+  background-color: rgb(99, 91, 91);
+}
+
+.auth-disabled input[type=text], .auth-disabled input[type=password] {
+  color:rgb(99, 91, 91);
+  font-style: italic;
+}
