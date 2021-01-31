@@ -1,0 +1,6 @@
+{
+  "mongoUri": "mongodb+srv://pandreyk:unsplashpass@cluster0.me4nr.mongodb.net/unsplash?retryWrites=true&w=majority",
+  "corsOrigin": "*",
+  "ACCESS_TOKEN_SECRET": "Rocket company",
+  "REFRESH_TOKEN_SECRET": "Nur-sultan"
+}
